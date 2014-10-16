@@ -15,7 +15,7 @@
     }
     .invisibleQuestion
     {
-      display: none;
+      display: inline;
     }
     #question3 {
       color: blue;
@@ -33,7 +33,12 @@
     #middle-cell {
       background-color: red;
     }
-
+    .bold-questions {
+      font-weight: bold;
+    }
+    .instructions {
+      color: #383838;
+    }
   </style>
   <script type="text/javascript">
     // Q: Describe what these functions do using line comments
@@ -54,28 +59,30 @@
   <title>Shapeways.com HTML Test</title>
 </head>
 <body>
-  <div id="introduction">
-    <h1>
-      Shapeways.com HTML Test
-    </h1>
-    <h2>
-      Instructions
-    </h2>
-    <p class="instructionContent">
-      Using the text-editor of your choice, make changes to this HTML document as instructed in the questions below.<br>
-      Each question will be marked with <strong>Q</strong>.<br>
-      Please modify this HTML with your answers (keep all CSS and Javascript in this file).
-      <br><br>
-      Save your test as [yourName]-test.html<br><br>
-      <a href="javascript:void(0);" onclick="beginTheTest()">Click here to begin the test</a>
-    </p>
+  <div class="instructions">
+    <div id="introduction">
+      <h1>
+        Shapeways.com HTML Test
+      </h1>
+      <h2>
+        Instructions
+      </h2>
+      <p class="instructionContent">
+        Using the text-editor of your choice, make changes to this HTML document as instructed in the questions below.<br>
+        Each question will be marked with <strong>Q</strong>.<br>
+        Please modify this HTML with your answers (keep all CSS and Javascript in this file).
+        <br><br>
+        Save your test as [yourName]-test.html<br><br>
+        <a href="javascript:void(0);" onclick="beginTheTest()">Click here to begin the test</a>
+      </p>
+    </div>
   </div>
   <style type="text/css">
     .invisibleQuestion
     {
-      filter:alpha(opacity=40);
-      -moz-opacity:0.4;
-      opacity:0.4;
+      filter:alpha(opacity=100);
+      -moz-opacity:1.0;
+      opacity:1.0;
     }
   </style>
   <div id="theTest" style="display:none;">
@@ -142,9 +149,9 @@
           <h3 style="display:inline"> Feature Question </h3><br>
           Create a button below this sentence.<br>
           When the button is clicked, make an alert box appear that says &quot;I&#39;ve done it!&quot;<br>
-          <button type="button">Click me, c'mon.</button>
+          <input type="button" value="Click me, c'mon!" onClick='alert("I&#39;ve done it!")'>
         </li>
-        <li id="question7"><strong>Q:</strong>
+        <li id="question7" class="bold-questions"><strong>Q:</strong>
           Make this question bold using css.  Use an external class selector to apply the style.
         </li>
         <li id="question8"><strong>Q:</strong>
@@ -224,7 +231,7 @@
   <style type="text/css">
     .invisibleQuestion
     {
-      color: #FFFFFF;
+      color: #000000;
     }
   </style>
 </body>
