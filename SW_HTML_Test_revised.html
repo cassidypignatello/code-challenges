@@ -49,6 +49,25 @@
     h3 {
       display: inline;
     }
+    #semi-transparent {
+      filter: alpha(opacity=40);
+      -moz-opacity: .40;
+      opacity: .40;
+      border: 3px solid #000000;
+      background-color: #f8f8e6;
+      width: 500px;
+      height: 257px;
+    }
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -128px;
+      margin-left: -250px;
+    }
+    #sample-text {
+      color: green;
+    }
   </style>
   <script type="text/javascript">
     // Q: Describe what these functions do using line comments
@@ -182,6 +201,9 @@
           <li>
             Add a semi-transparent box which is centered on the screen.
           </li>
+          <div id="semi-transparent" class="centered">
+            <p id="sample-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
           <li>
             Give the box a 3px black border.
           </li>
