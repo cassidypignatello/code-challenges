@@ -16,6 +16,10 @@
     .invisibleQuestion
     {
       display: inline;
+      color: #000000;
+      filter: alpha(opacity=100);
+      -moz-opacity: 1.0;
+      opacity: 1.0;
     }
     #question3 {
       color: blue;
@@ -38,6 +42,12 @@
     }
     .instructions {
       color: #383838;
+    }
+    #theTest {
+      display: none;
+    }
+    h3 {
+      display: inline;
     }
   </style>
   <script type="text/javascript">
@@ -77,15 +87,7 @@
       </p>
     </div>
   </div>
-  <style type="text/css">
-    .invisibleQuestion
-    {
-      filter:alpha(opacity=100);
-      -moz-opacity:1.0;
-      opacity:1.0;
-    }
-  </style>
-  <div id="theTest" style="display:none;">
+  <div id="theTest">
 	  <h2>
 		Questions
 	  </h2>
@@ -94,6 +96,7 @@
         <li id="question1" class="question"><strong>Q:</strong>
           Add this question to the unordered list shown below.
         </li>
+        <!-- Just wanted to mention that I didn't extract this inline style to an external class selector since the below question explicitly said to use an inline style here. -->
         <li id="question2" style="color:blue;"><strong>Q:</strong>
         Make this question blue using an inline style.
         </li>
@@ -102,7 +105,7 @@
         Make this question blue using an external id selector.
         </li>
         <li id="question4"><strong>Q:</strong>
-          <h3 style="display:inline"> Feature Question </h3><br>
+          <h3> Feature Question </h3><br>
           Add a table inside this list item.<br>
           &mdash;
           Make 5 rows and 3 columns.<br>
@@ -146,7 +149,7 @@
         <a href="http://www.shapeways.com/jobs">Jobs @ Shapeways</a>
         </li>
         <li id="question6"><strong>Q:</strong>
-          <h3 style="display:inline"> Feature Question </h3><br>
+          <h3> Feature Question </h3><br>
           Create a button below this sentence.<br>
           When the button is clicked, make an alert box appear that says &quot;I&#39;ve done it!&quot;<br>
           <input type="button" value="Click me, c'mon!" onClick='alert("I&#39;ve done it!")'>
@@ -165,6 +168,7 @@
         <li id="question10"><strong>Q:</strong>
         <span>
           Describe the differences between the IE6, IE7, and W3C box models.
+          <p>In the IE6/IE7 box model, the width of an element is measured between the borders of the box, including both the padding and the border. In the W3C box model, the width of an element is measured by the width of the content of the box, excluding padding and border. In CSS3, the W3C included a box-sizing property which allows you to switch between box models. Using the declaration box-sizing: border-box will switch to the IE6/IE7 model, while box-sizing: content-box will use the W3C model. Some people find the W3C model counter-intuitive, and usually would make the argument that logically the width of a physical box would be measured from border to border, and not by it's content. Ultimately, it's a subjective argument, and enforcing standards compliance is more important than personal preference.</p>
         </span>
         </li>
         <li id="question11"><strong>Q:</strong>
@@ -173,7 +177,7 @@
         </span>
         </li>
         <li id="question12"><strong>Q:</strong>
-        <h3 style="display:inline"> Adventure Question </h3>
+        <h3> Adventure Question </h3>
         <ul>
           <li>
             Add a semi-transparent box which is centered on the screen.
@@ -197,7 +201,7 @@
           </ul>
         </li>
         <li id="question13"><strong>Q:</strong>
-        <h3 style="display:inline"> Adventure Question </h3><br>
+        <h3> Adventure Question </h3><br>
           Change the functionality of the &quot;begin the test&quot; link:
           <ul>
             <li>
@@ -209,7 +213,7 @@
           </ul>
         </li>
         <li id="question14"><strong>Q:</strong>
-        <h3 style="display:inline"> Feature Question </h3><br>
+        <h3> Feature Question </h3><br>
         <ol>
         <li> Show how to include a variable in a page using PHP</li>
         <li> Show how to loop over a collection of elements in PHP</li>
@@ -218,21 +222,15 @@
         </ol>
         </li>
         <li id="question15"><strong>Q:</strong>
-        <h3 style="display:inline"> Adventure Question </h3><br>
+        <h3> Adventure Question </h3><br>
           Describe the MVC design pattern as it applies to web servers - start from initial HTTP request and end with writing the response.
         </li>
         <li id="question16"><strong>Q:</strong>
-        <h3 style="display:inline"> Feature Question </h3><br>
+        <h3> Feature Question </h3><br>
           Describe the pros and cons of version control.
         </li>
       </ul>
 	  </div>
   </div>
-  <style type="text/css">
-    .invisibleQuestion
-    {
-      color: #000000;
-    }
-  </style>
 </body>
 </html>
