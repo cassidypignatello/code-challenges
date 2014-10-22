@@ -45,6 +45,7 @@
     }
     #theTest {
       display: none;
+      opacity: 0;
     }
     h3 {
       display: inline;
@@ -72,6 +73,9 @@
     float: right;
     padding: 2px 5px;
     }
+    #introduction {
+      overflow: hidden;
+    }
   </style>
   <script type="text/javascript">
     // Q: Describe what these functions do using line comments
@@ -89,6 +93,7 @@
       theTest.style.display = "block";
     }
   </script>
+  <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
   <title>Shapeways.com HTML Test</title>
 </head>
 <body>
@@ -106,7 +111,7 @@
         Please modify this HTML with your answers (keep all CSS and Javascript in this file).
         <br><br>
         Save your test as [yourName]-test.html<br><br>
-        <a href="javascript:void(0);" onclick="beginTheTest()">Click here to begin the test</a>
+        <a id="beginTest" href="javascript:void(0);">Click here to begin the test</a>
       </p>
     </div>
   </div>
@@ -234,6 +239,24 @@
             <li>
               use the <strong>YUI javascript library</strong> to animate the introduction box closing.
             </li>
+            <script type="text/javascript">
+              YUI().use('transition', function(Y){
+                var introduction = Y.one('#introduction'),
+                    test = Y.one('#theTest');
+
+                Y.one('#beginTest').on('click', function(e) {
+                  e.preventDefault();
+                  introduction.transition({
+                    width: 0,
+                    height: 0
+                  });
+
+                  test.setStyle('display', 'block').transition({
+                    opacity: 1
+                  });
+                });
+              });
+            </script>
             <li>
               use the <strong>YUI javascript library</strong> to fade the test box in.
             </li>
