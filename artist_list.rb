@@ -2,9 +2,11 @@ class ArtistList
   
   def initialize
     f = File.open("./Artist_lists_small.txt", "r")
+    array = []
       f.each_line do |line|
-        puts line
+        array << line
       end
+      puts array[0]
     f.close  
   end
 end
