@@ -266,9 +266,46 @@
         <h3> Feature Question </h3><br>
         <ol>
         <li> Show how to include a variable in a page using PHP</li>
+        <?php $testVariable = 0; ?>
         <li> Show how to loop over a collection of elements in PHP</li>
+        <?php
+          $sentence = array("This ", "is ", "how ", "you ", "loop ", "over ", "a ", "collection ", "in ", "PHP!");
+
+          foreach ($sentence as $word) {
+              echo $word;
+          }  
+        ?>
         <li> Show an IF/ELSEIF/ELSE conditional in PHP</li>
+        <?php
+          $yourGuess = 14;
+          $number = 21;
+
+          if ($yourGuess < $number) {
+            echo "Too low!";
+          }
+          elseif ($yourGuess > $number) {
+            echo "Too high!";
+          }
+          else {
+            echo "Just right, you win!";
+          }
+        ?>
         <li> Show three ways to include content from another file in PHP</li>
+          <!-- #1 - Basic include -->
+          <?php include 'test.php'; ?>
+
+          <!-- #2 - Include within a function -->
+          <?php
+
+            function foo() {
+              include 'test.php';
+            }
+
+            foo(); 
+          ?>
+
+          <!-- #3 - Include through HTTP -->
+          <?php include 'http://www.example.com/test.php' ?>
         </ol>
         </li>
         <li id="question15"><strong>Q:</strong>
