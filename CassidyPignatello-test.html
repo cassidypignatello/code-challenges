@@ -79,11 +79,14 @@
   </style>
   <script type="text/javascript">
     // Q: Describe what these functions do using line comments
+
+    // This will show an alert dialog box with the text being whatever string is passed through to the value argument.
     function alertValue(value)
     {
       window.alert(value);
     }
 
+    // Upon clicking the "Click here to begin the test" link, this function causes the introduction div to disappear by setting its display property to none, and the theTest div to appear by setting its display property to block.
     function beginTheTest()
     {
       var introduction = document.getElementById("introduction");
@@ -269,9 +272,9 @@
         <?php $testVariable = 0; ?>
         <li> Show how to loop over a collection of elements in PHP</li>
         <?php
-          $sentence = array("This ", "is ", "how ", "you ", "loop ", "over ", "a ", "collection ", "in ", "PHP!");
+          $words = array("This ", "is ", "how ", "you ", "loop ", "over ", "a ", "collection ", "in ", "PHP!");
 
-          foreach ($sentence as $word) {
+          foreach ($words as $word) {
               echo $word;
           }  
         ?>
